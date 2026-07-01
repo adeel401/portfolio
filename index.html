@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hafiz Adeel Anwar — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <div class="nav-logo">HAA</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-tag"><span class="tag-dot"></span> Open to Opportunities · Manchester, UK</div>
+      <h1 class="hero-name">Hafiz<br>Adeel Anwar</h1>
+      <div class="hero-role" id="typewriter"></div>
+      <p class="hero-desc">
+        SIA Licensed Door Supervisor with a strong academic background in Data Analysis,
+        Economics, and Digital Marketing. Calm under pressure, analytically sharp,
+        and ready to deliver in fast-paced environments.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+        <a href="#skills" class="btn-outline">View Skills</a>
+      </div>
+    </div>
+    <!-- Profile Photo — Dynamic Upload -->
+    <div style="display:flex;flex-direction:column;gap:1.5rem;align-items:center;">
+      <div style="position:relative;">
+
+        <!-- Hidden file input -->
+        <input type="file" id="photoInput" accept="image/*" style="display:none;" />
+
+        <!-- Clickable photo circle -->
+        <div id="photoCircle"
+          onclick="document.getElementById('photoInput').click()"
+          title="Click to upload your photo"
+          style="width:220px;height:220px;border-radius:50%;overflow:hidden;
+                 border:3px solid #3B82F6;box-shadow:0 0 30px rgba(59,130,246,0.3);
+                 cursor:pointer;position:relative;">
+
+          <!-- Actual photo (shown after upload) -->
+          <img id="profileImg" src="" alt="Hafiz Adeel Anwar"
+            style="width:100%;height:100%;object-fit:cover;display:none;" />
+
+          <!-- Placeholder initials (shown before upload) -->
+          <div id="pp"
+            style="display:flex;align-items:center;justify-content:center;
+                   width:100%;height:100%;background:#1A2236;
+                   font-family:Rajdhani,sans-serif;font-size:3.5rem;
+                   font-weight:700;color:#3B82F6;">HAA</div>
+
+          <!-- Hover overlay -->
+          <div id="photoOverlay"
+            style="position:absolute;inset:0;background:rgba(59,130,246,0.7);
+                   display:flex;flex-direction:column;align-items:center;
+                   justify-content:center;opacity:0;transition:opacity 0.25s;
+                   color:#fff;font-size:0.8rem;font-weight:600;gap:6px;">
+            <span style="font-size:1.6rem;">📷</span>
+            <span>Upload Photo</span>
+          </div>
+        </div>
+
+        <!-- Green online dot -->
+        <div style="position:absolute;bottom:10px;right:10px;background:#34D399;
+                    border-radius:50%;width:22px;height:22px;border:3px solid #0A0F1E;"></div>
+      </div>
+
+      <!-- Upload hint text -->
+      <p id="uploadHint" style="font-size:0.75rem;color:#94A3B8;text-align:center;margin-top:-8px;">
+        📷 Click photo to upload
+      </p>
+
+      <div class="hero-stats" style="width:100%;">
+        <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Master's Degrees</div></div>
+        <div class="stat-box"><div class="stat-num">SIA</div><div class="stat-label">Licensed Badge</div></div>
+        <div class="stat-box"><div class="stat-num">5+</div><div class="stat-label">Tech Skills</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-inner">
+    <p class="section-eyebrow">Who I Am</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="divider"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Reliable and adaptable professional based in Manchester, holding a valid SIA Door Supervisor licence. Currently completing an MSc in Management with Digital Marketing at BPP University, building on previous Master's degrees in Economics and Computer Science.</p>
+        <p>My academic background gives me a strong mix of numerical reasoning, analytical thinking, and commercial awareness. I bring practical skills in data analysis (Excel, Power BI, SQL) and digital marketing, alongside real-world experience in customer-facing roles requiring calm decision-making and strong teamwork.</p>
+        <p>Motivated, punctual, and flexible with shift patterns including evenings, weekends, and holidays — whether in a security, data, or customer service role, I bring the same commitment to high standards.</p>
+        <div class="about-badges">
+          <span class="badge">Manchester, UK</span>
+          <span class="badge">Right to Work Confirmed</span>
+          <span class="badge">Flexible Shifts</span>
+          <span class="badge">Quick Learner</span>
+          <span class="badge">Team Player</span>
+        </div>
+      </div>
+      <div>
+        <div class="sia-card">
+          <div class="sia-icon">🛡️</div>
+          <h3>SIA Door Supervisor</h3>
+          <p>Security Industry Authority<br>Licensed Professional</p>
+          <span class="sia-valid">✔ Valid Licence</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-inner">
+    <p class="section-eyebrow">What I Bring</p>
+    <h2 class="section-title">Key Skills</h2>
+    <div class="divider"></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">📊 Data Analysis</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Data Analysis</span>
+          <span class="skill-tag highlight">SQL</span>
+          <span class="skill-tag highlight">Microsoft Excel</span>
+          <span class="skill-tag highlight">Power BI</span>
+          <span class="skill-tag highlight">Google Sheets</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">KPI Tracking</span>
+          <span class="skill-tag">Trend Analysis</span>
+          <span class="skill-tag">Pivot Tables</span>
+          <span class="skill-tag">VLOOKUP / XLOOKUP</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">🛡️ Door Supervisor</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">SIA Door Supervisor Licence</span>
+          <span class="skill-tag highlight">Conflict Resolution</span>
+          <span class="skill-tag highlight">Crowd Management</span>
+          <span class="skill-tag">ID Verification</span>
+          <span class="skill-tag">Challenge 25</span>
+          <span class="skill-tag">Health &amp; Safety</span>
+          <span class="skill-tag">Emergency Procedures</span>
+          <span class="skill-tag">Queue Management</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">🤝 Customer &amp; General</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Customer Service</span>
+          <span class="skill-tag">Cash Handling</span>
+          <span class="skill-tag">Stock Management</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Teamwork</span>
+          <span class="skill-tag">Time Management</span>
+          <span class="skill-tag">Attention to Detail</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Digital Marketing</span>
+          <span class="skill-tag">Microsoft Office</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="section-inner">
+    <p class="section-eyebrow">Work History</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="divider"></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-title">Entry-Level Candidate — Customer-Facing &amp; Security-Aware Roles</div>
+            <div class="timeline-org">United Kingdom</div>
+          </div>
+          <span class="timeline-date">2024 – Present</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Followed company procedures, safety guidelines, and instructions accurately in fast-paced environments</li>
+          <li>Interacted confidently with members of the public and supported smooth day-to-day operations</li>
+          <li>Worked flexibly across different shift patterns, including evenings and weekends</li>
+          <li>Demonstrated reliability, punctuality, and a positive, team-oriented attitude</li>
+          <li>Quick to learn new tasks, procedures, and venue-specific requirements</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="section-inner">
+    <p class="section-eyebrow">Academic Background</p>
+    <h2 class="section-title">Education</h2>
+    <div class="divider"></div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-degree">MSc Management with Digital Marketing</div>
+        <div class="edu-uni">BPP University, United Kingdom</div>
+        <div class="edu-desc">Marketing analytics, consumer behaviour, branding, and digital campaign planning.</div>
+        <span class="edu-year">Expected 2026 · Ongoing</span>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">MSc Computer Science</div>
+        <div class="edu-uni">Virtual University of Pakistan</div>
+        <div class="edu-desc">Programming, data structures, databases, and SQL. Strong analytical and problem-solving background.</div>
+        <span class="edu-year">2016</span>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">MSc Economics</div>
+        <div class="edu-uni">University of Gujrat, Pakistan</div>
+        <div class="edu-desc">Microeconomics, macroeconomics, statistical analysis, and quantitative methods.</div>
+        <span class="edu-year">2014</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-eyebrow">Get In Touch</p>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Open to entry-level opportunities in Door Supervision, Data Analysis, and Customer Service roles in Manchester and surrounding areas.</p>
+        <div class="about-badges">
+          <span class="badge">Door Supervisor</span>
+          <span class="badge">Data Analysis</span>
+          <span class="badge">Customer Service</span>
+          <span class="badge">Manchester</span>
+        </div>
+      </div>
+      <div class="contact-items">
+        <a class="contact-item" href="tel:07352231453">
+          <span class="contact-icon">📞</span>
+          <div><div class="contact-label">Phone</div><div class="contact-value">07352 231453</div></div>
+        </a>
+        <a class="contact-item" href="mailto:adeel31anwar@example.com">
+          <span class="contact-icon">✉️</span>
+          <div><div class="contact-label">Email</div><div class="contact-value">adeel31anwar@example.com</div></div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/mr-aadi/" target="_blank">
+          <span class="contact-icon">💼</span>
+          <div><div class="contact-label">LinkedIn</div><div class="contact-value">linkedin.com/in/mr-aadi</div></div>
+        </a>
+        <a class="contact-item" href="https://github.com/adeel401" target="_blank">
+          <span class="contact-icon">🐙</span>
+          <div><div class="contact-label">GitHub</div><div class="contact-value">github.com/adeel401</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 Hafiz Adeel Anwar · Manchester, UK · Built with HTML, CSS &amp; JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
